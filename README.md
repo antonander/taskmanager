@@ -1,13 +1,30 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+Task manager
+============
+A easy to use task manager that allows you to keep track of the amount of time you spend on every task during the day.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## System requirements
 
-## About Laravel
+To run this locally, you will first need to install the following in your machine:
+
+- [PHP 7.3.18](https://www.php.net/downloads.php)
+  If you need to
+- MySQL 5.7.27
+- NPM 6.12.0
+- GIT
+
+### Installation
+
+### Clone this Github repository
+
+Find a location on your computer where you want to store the project and open the command line there. Next, use the following command which will pull the project from github and create a copy of it on your local computer at the sites directory inside another folder called “projectName”.
+
+```
+git clone https://github.com/antonander/taskmanager.git
+```
+
+
+
+
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
