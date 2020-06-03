@@ -2,7 +2,7 @@ Task manager
 ============
 An easy to use task manager that allows you to keep track of the amount of time you spend on every task during the day.
 
-Note: If you want to use the custom php file included to manage your tasks, just rememeber that all times are under the Coordinated Universal Time (UTC).
+**Note**: If you want to use the custom php file included to manage your tasks, just rememeber that all times are under the Coordinated Universal Time (UTC).
 
 [**Demo**](http://gaming4learning.com/taskmanagerdemo/)
 
@@ -15,10 +15,6 @@ Find a location on your computer where you want to store the project and open th
 ```
 git clone https://github.com/antonander/taskmanager.git
 ```
-
-### 2. Cd into your project
-
-You will need to be inside that project file to enter all of the rest of the commands. So remember to type cd projectName to move your terminal working location to the project file we just barely created. (Of course substitute “projectName” in the command above, with the name of the folder you created in the previous step).
 
 ### 2. Enter into your project's folder
 
@@ -53,9 +49,9 @@ npm install
 ```
 cp .env.example .env
 ```
-Note: Remember that, if for any reason you can't create the copy with the command given, you can always do it manually duplicating the file inside the project folder.
+**Note**: Remember that, if for any reason you can't create the copy with the command given, you can always do it manually duplicating the file inside the project folder.
 
-### 6. Create a copy of your .env file
+### 6. Generate a key
 
 Laravel requires you to have an app encryption key which is generally randomly generated and stored in your .env file. The app will use this encryption key to encode various elements of your application from cookies to password hashes and more. To generate your encryption key, simply use this command:
 
@@ -77,14 +73,15 @@ We will want to allow Laravel to connect to the database that you just created i
 
 In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. This will allow us to run migrations and seed the database in the next step.
 
-Note: Normally, is you are on a localhost, these are the credentials you will have to use:
+**Note**: Normally, if you are on a localhost, these are the credentials you will have to use:
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=taskmanager
-DB_USERNAME=root
-DB_PASSWORD=root
+- DB_CONNECTION=mysql
+- DB_HOST=127.0.0.1
+- DB_PORT=3306
+- DB_DATABASE=taskmanager
+- DB_USERNAME=root
+- DB_PASSWORD=root
+
 
 ### 7. Migrate the database
 
@@ -132,6 +129,26 @@ php taskmanager.php summary
 
 Important: Before you start playing with the script, just remember that you have to have MySQL running for it to work. You can do this with MAMP or XAMPP. Also, if you have different credentials for the database, feel free to change them inside the file.
 
+## Docker container
+
+You can find a compressed version of this project in a Docker Container here: [https://1drv.ms/u/s!AgIHEVYM7KSzhSn9mFbgs28QgA5A?e=oHRPHv]https://1drv.ms/u/s!AgIHEVYM7KSzhSn9mFbgs28QgA5A?e=oHRPHv
+
+All you have to do to run it is download the "taskmanager" folder (the link above), go to that directory using bash (the console on Mac or with something like GitBash for Windows). Once there, run the following command to build the application:
+
+```
+docker-compose build
+```
+
+When the process is done, use this command to run the application:
+
+```
+docker-compose up
+```
+
+Done, now go to your favorite browser and type: localhost:8000 in the address bar. You should now see the timer.
+
+**Note**: If instead of the timer you see the message "The database is not connected. If you have questions, check the documentation.", please reload the page.
+
 ## Useful notes
 
 ### About this project
@@ -142,7 +159,7 @@ However for the script version, since this was pure PHP I decided to track time 
 
 Both process work together and are connected to the same database.
 
-### Where is your code?
+### Where my your code?
 
 If you have no prior experience with Laravel, it might be hard to locate the code I created, so, to save you some time:
 
